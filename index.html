@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<!-- HTML5 Hello world by kirupa - http://www.kirupa.com/html5/getting_your_feet_wet_html5_pg1.htm -->
+<html lang="en-us">
+
+	<head>
+		<meta charset="utf-8">
+		<title>Hello...</title>
+		<style type="text/css">
+			#demobox {
+			  position: absolute;
+			  left:0px;
+			  bottom:0px;
+			}
+
+			.miniBoxMaster .miniBoxRow {
+				height:56px;
+			  	position:relative;
+			}
+
+			.miniBoxMaster .miniBoxRow .miniBoxItem{
+				height:50px;
+				width:50px;
+				position:relative;
+				margin: 3px;
+				float:left;
+				text-decoration:none;
+				font-size:20px;
+				text-align:center;
+				line-height:50px;
+				border-radius:5px;
+			}
+
+			.miniBoxMaster .miniBoxRow .miniBoxItem:hover{
+				animation: bounce 0.3s;
+				transform: scale(1.1) rotate(0deg);
+				-webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+				-moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+				box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+				cursor:pointer;
+			}
+
+			@keyframes bounce {
+					0% {
+						transform: scale(1) rotate(2deg);
+						animation-timing-function: ease;
+			    	}
+			    	25% {
+						transform: scale(1.025) rotate(5deg);
+						animation-timing-function: ease;
+			    	}
+			    	50% {
+						transform: scale(1.05) rotate(-2deg);
+						animation-timing-function: ease;
+			    	}
+					75% {
+						transform: scale(1.075) rotate(-5deg);
+						animation-timing-function: ease;
+			    	}
+					100%{
+						transform: scale(1.1) rotate(0deg);
+					}
+			}
+		</style>
+	</head>
+
+	<body>
+		<div style="z-index:9999; position: fixed">
+		<input type="button" value="add" id="foo">
+
+		</div>
+
+		<div id="demobox">
+		</div>
+
+		<script type="text/javascript" src="jquery.js"></script>
+		<script type="text/javascript" src="miniBox.js"></script>
+		<script type="text/javascript" src="main.js"></script>
+	</body>
+</html>
